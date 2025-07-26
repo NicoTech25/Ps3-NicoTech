@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nicotech HEN Installer</title>
+  <script src="ps3hen_v100.js"></script>
+  <style>
+    body {
+      background-color: #202020;
+      color: #FFFFFF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #FFD700;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 14px 28px;
+      font-size: 18px;
+      background-color: #1e90ff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0d6efd;
+    }
+
+    #status, #log {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #90ee90;
+    }
+
+    hr {
+      border: 1px solid #444;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body onload="writeEnvInfo(); ps3chk();">
+  <div class="container">
+    <h1>🚀 Nicotech PS3 HEN Installer</h1>
+    <p>Compatible con firmware HFW 4.83 – 4.92 CEX</p>
+    <hr>
+    <p>
+      Pulsa el botón para ejecutar el exploit y activar HEN.
+      Si falla, reinicia el navegador y vuelve a intentar.
+    </p>
+    <button onclick="initROP(true)">Instalar HEN</button>
+    <div id="status"></div>
+    <div id="log"></div>
+    <div id="result"></div>
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
